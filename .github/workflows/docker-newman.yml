@@ -26,19 +26,16 @@ jobs:
       - name: Build Docker image
         run: docker build -t fit4110/iot-ingestion:lab04 .
 
-      - name: Run Docker container
+      - name: Run Docker container, mock servers, and Newman tests
         run: |
+          npx prism mock contracts/ai-vision.openapi.yaml --port 4011 --host 0.0.0.0 > prism-vision.log 2>&1 &
           docker run -d --rm \
             --name fit4110-iot-lab04 \
             -p 8000:8000 \
             --env-file .env.example \
             fit4110/iot-ingestion:lab04
-
-      - name: Wait for service health
-        run: npx wait-on http://localhost:8000/health --timeout 30000
-
-      - name: Run Newman against Docker container
-        run: npm run test:local
+          npx wait-on http://localhost:8000/health http-get://localhost:4011/health --timeout 30000
+          npm run test:local
 
       - name: Show container logs on failure
         if: failure()

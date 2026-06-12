@@ -9,7 +9,7 @@ lint:
 	npm run lint:openapi
 
 mock:
-	npm run mock:iot
+	npm run mock:core
 
 test-mock:
 	npm run test:mock

@@ -50,7 +50,7 @@ Kết quả mong đợi:
 ```json
 {
   "status": "ok",
-  "service": "iot-ingestion",
+  "service": "core-business",
   "version": "0.4.0"
 }
 ```
