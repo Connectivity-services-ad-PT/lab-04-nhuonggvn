@@ -5,6 +5,13 @@
 - [x] Có base image hợp lý.
 - [x] Có `WORKDIR`.
 - [x] Có copy dependency trước source để tận dụng cache.
+# Docker Readiness Checklist
+
+## Dockerfile
+
+- [x] Có base image hợp lý.
+- [x] Có `WORKDIR`.
+- [x] Có copy dependency trước source để tận dụng cache.
 - [x] Có `EXPOSE`.
 - [x] Có `CMD` hoặc `ENTRYPOINT`.
 - [x] Có `HEALTHCHECK`.
@@ -13,10 +20,10 @@
 
 ## Runtime
 
-- [ ] Container chạy được.
-- [ ] Port map đúng.
-- [ ] `/health` trả `200`.
-- [ ] Log khởi động rõ ràng.
+- [x] Container chạy được.
+- [x] Port map đúng.
+- [x] `/health` trả `200`.
+- [x] Log khởi động rõ ràng.
 - [x] Cấu hình qua ENV.
 
 ## Testing
@@ -30,8 +37,8 @@
 
 ## Evidence
 
-- [ ] Có ảnh/log `docker build`.
-- [ ] Có ảnh/log `docker run`.
-- [ ] Có ảnh/log `curl /health`.
+- [x] Có ảnh/log `docker build`.
+- [x] Có ảnh/log `docker run`.
+- [x] Có ảnh/log `curl /health`.
 - [x] Có Newman HTML/XML report.
-- [ ] Có tag image đúng quy ước.
+- [x] Có tag image đúng quy ước.

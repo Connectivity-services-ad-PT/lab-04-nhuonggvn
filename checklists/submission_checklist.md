@@ -10,7 +10,7 @@ Nộp các minh chứng sau:
 - [x] Postman Collection đã chạy trên container
 - [x] Postman Environment local/docker
 - [x] Newman report XML/HTML
-- [ ] Log hoặc ảnh `docker build` (chụp hoặc lấy từ GitHub Actions)
-- [ ] Log hoặc ảnh `docker run` (chụp hoặc lấy từ GitHub Actions)
-- [ ] Log hoặc ảnh `GET /health`
-- [ ] Link hoặc tên image tag đã push
+- [x] Log hoặc ảnh `docker build` (chụp hoặc lấy từ GitHub Actions)
+- [x] Log hoặc ảnh `docker run` (chụp hoặc lấy từ GitHub Actions)
+- [x] Log hoặc ảnh `GET /health`
+- [x] Link hoặc tên image tag đã push
