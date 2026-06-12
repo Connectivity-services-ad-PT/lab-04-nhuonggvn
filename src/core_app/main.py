@@ -168,7 +168,7 @@ def verify_bearer_token(authorization: Optional[str] = Header(default=None)) -> 
         )
 
 
-@app.get("/health", response_model=HealthResponse)
+@app.api_route("/health", methods=["GET", "HEAD"], response_model=HealthResponse)
 def health() -> HealthResponse:
     return HealthResponse(
         status="ok",
