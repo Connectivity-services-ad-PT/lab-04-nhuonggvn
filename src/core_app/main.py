@@ -1,3 +1,4 @@
+import http.client
 import os
 import re
 from datetime import datetime, timezone
@@ -50,8 +51,8 @@ class AccessCheckRequest(BaseModel):
     @field_validator("cardId")
     @classmethod
     def validate_card_id(cls, v: str) -> str:
-        if not re.match(r"^[A-Z0-9]{8,16}$", v):
-            raise ValueError("cardId must match pattern ^[A-Z0-9]{8,16}$")
+        if not re.match(r"^CARD-[0-9]{6}$", v):
+            raise ValueError("cardId must match pattern ^CARD-[0-9]{6}$")
         return v
 
 
@@ -101,13 +102,13 @@ async def http_exception_handler(request: Request, exc: HTTPException) -> JSONRe
     else:
         problem = build_problem(
             status_code=exc.status_code,
-            title=status.HTTP_STATUS_CODES.get(exc.status_code, "HTTP Error"),
+            title=http.client.responses.get(exc.status_code, "HTTP Error"),
             detail=str(exc.detail),
             instance=str(request.url.path),
         )
 
     problem.setdefault("status", exc.status_code)
-    problem.setdefault("title", status.HTTP_STATUS_CODES.get(exc.status_code, "HTTP Error"))
+    problem.setdefault("title", http.client.responses.get(exc.status_code, "HTTP Error"))
     problem.setdefault("type", "about:blank")
     problem.setdefault("detail", "Request failed")
     problem.setdefault("instance", str(request.url.path))
