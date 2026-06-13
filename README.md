@@ -78,36 +78,36 @@ Sau khi hoàn thành Lab 04, mỗi nhóm cần làm được:
 
 ```text
 FIT4110_lab04_docker_packaging/
-├── README.md
-├── RUN_LOCAL.md
-├── Dockerfile
-├── .dockerignore
-├── .env.example
-├── .gitignore
-├── Makefile
-├── package.json
-├── requirements.txt
-├── src/
-│   └── iot_app/
-│       ├── __init__.py
-│       └── main.py
-├── contracts/
-│   └── iot-ingestion.openapi.yaml
-├── postman/
-│   ├── collections/
-│   │   └── FIT4110_lab04_iot_docker.postman_collection.json
-│   └── environments/
-│       ├── FIT4110_lab04_mock.postman_environment.json
-│       └── FIT4110_lab04_local.postman_environment.json
-├── mock-data/
-├── scripts/
-├── docs/
-├── checklists/
-├── templates/
-├── reports/
-└── .github/
-    └── workflows/
-        └── docker-newman.yml
+    README.md
+    RUN_LOCAL.md
+    Dockerfile
+    .dockerignore
+    .env.example
+    .gitignore
+    Makefile
+    package.json
+    requirements.txt
+    src/
+        iot_app/
+            __init__.py
+            main.py
+    contracts/
+        iot-ingestion.openapi.yaml
+    postman/
+        collections/
+            FIT4110_lab04_iot_docker.postman_collection.json
+        environments/
+            FIT4110_lab04_mock.postman_environment.json
+            FIT4110_lab04_local.postman_environment.json
+    mock-data/
+    scripts/
+    docs/
+    checklists/
+    templates/
+    reports/
+        .github/
+            workflows/
+                docker-newman.yml
 ```
 
 ---

@@ -11,3 +11,4 @@ reports/*.xml
 reports/*.html
 reports/*.json
 !reports/.gitkeep
+summary-lab2-to-lab4.md
